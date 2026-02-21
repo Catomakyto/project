@@ -1,0 +1,5 @@
+policy,full_recal_mean,full_recal_ci95_low,full_recal_ci95_high,partial_recal_mean,partial_recal_ci95_low,partial_recal_ci95_high,probe_mean,probe_ci95_low,probe_ci95_high,cumulative_reward_mean,cumulative_reward_ci95_low,cumulative_reward_ci95_high,unnecessary_recal_rate_mean,unnecessary_recal_rate_ci95_low,unnecessary_recal_rate_ci95_high,time_to_failure_median,time_to_failure_iqr_q1,time_to_failure_iqr_q3
+periodic_full,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.326972150162336,6.326972150162336,6.326972150162336,0.0,0.0,0.0,5.0,5.0,5.0
+periodic_partial,0.0,0.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,6.184413710025054,6.184413710025054,6.184413710025054,0.0,0.0,0.0,9.0,9.0,9.0
+threshold,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.451885134477349,6.451885134477349,6.451885134477349,0.0,0.0,0.0,9.0,9.0,9.0
+conservative_bandit,0.0,0.0,0.0,0.0,0.0,0.0,8.0,8.0,8.0,6.474073415359863,6.474073415359863,6.474073415359863,0.0,0.0,0.0,9.0,9.0,9.0

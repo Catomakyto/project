@@ -1,0 +1,305 @@
+{
+  "config": {
+    "csv": "data/hardware/hardware_timeseries.csv",
+    "outdir": "results/hw_grounded_smoke3",
+    "steps": 20,
+    "mc": 6,
+    "budget": 12.0,
+    "seed": 12345,
+    "lookahead": 10,
+    "probe_shots": 1500,
+    "probe_cost": 0.5,
+    "partial_cost": 4.0,
+    "full_cost": 10.0,
+    "lambda_cost": 0.1,
+    "failure_threshold": 0.8,
+    "failure_consecutive": 3,
+    "threshold_partial": 0.03,
+    "threshold_full": 0.08
+  },
+  "budget_matching": {
+    "periodic_full_period": 20,
+    "periodic_partial_period": 9,
+    "conservative_policy_impl": "existing_conservative_bandit"
+  },
+  "results": {
+    "periodic_full": {
+      "total_full_recal_count": {
+        "mean": 1.0,
+        "ci95_low": 1.0,
+        "ci95_high": 1.0
+      },
+      "total_partial_recal_count": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "total_probe_count": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "cumulative_reward": {
+        "mean": 15.274846868020338,
+        "ci95_low": 14.811715841056873,
+        "ci95_high": 15.737977894983803
+      },
+      "total_cost": {
+        "mean": 10.0,
+        "ci95_low": 10.0,
+        "ci95_high": 10.0
+      },
+      "unnecessary_recalibration_rate": {
+        "mean": 0.8333333333333334,
+        "ci95_low": 0.5066666666666666,
+        "ci95_high": 1.1600000000000001
+      },
+      "time_to_failure": {
+        "median": 15.0,
+        "iqr_q1": 12.75,
+        "iqr_q3": 16.5
+      }
+    },
+    "periodic_partial": {
+      "total_full_recal_count": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "total_partial_recal_count": {
+        "mean": 3.0,
+        "ci95_low": 3.0,
+        "ci95_high": 3.0
+      },
+      "total_probe_count": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "cumulative_reward": {
+        "mean": 16.188954394314667,
+        "ci95_low": 15.887008360717589,
+        "ci95_high": 16.490900427911743
+      },
+      "total_cost": {
+        "mean": 12.0,
+        "ci95_low": 12.0,
+        "ci95_high": 12.0
+      },
+      "unnecessary_recalibration_rate": {
+        "mean": 0.27777777777777773,
+        "ci95_low": 0.07699658737451037,
+        "ci95_high": 0.4785589681810451
+      },
+      "time_to_failure": {
+        "median": 19.5,
+        "iqr_q1": 11.25,
+        "iqr_q3": 21.0
+      }
+    },
+    "threshold": {
+      "total_full_recal_count": {
+        "mean": 0.6666666666666666,
+        "ci95_low": 0.2534623857379983,
+        "ci95_high": 1.079870947595335
+      },
+      "total_partial_recal_count": {
+        "mean": 1.0,
+        "ci95_low": -0.23961284278600492,
+        "ci95_high": 2.2396128427860047
+      },
+      "total_probe_count": {
+        "mean": 1.3333333333333333,
+        "ci95_low": 0.5069247714759966,
+        "ci95_high": 2.15974189519067
+      },
+      "cumulative_reward": {
+        "mean": 15.331622735577701,
+        "ci95_low": 14.828581869147667,
+        "ci95_high": 15.834663602007735
+      },
+      "total_cost": {
+        "mean": 11.333333333333334,
+        "ci95_low": 10.920129052404665,
+        "ci95_high": 11.746537614262003
+      },
+      "unnecessary_recalibration_rate": {
+        "mean": 0.6666666666666666,
+        "ci95_low": 0.32928678406370937,
+        "ci95_high": 1.0040465492696238
+      },
+      "time_to_failure": {
+        "median": 18.5,
+        "iqr_q1": 14.75,
+        "iqr_q3": 20.75
+      }
+    },
+    "conservative_bandit": {
+      "total_full_recal_count": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "total_partial_recal_count": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "total_probe_count": {
+        "mean": 20.0,
+        "ci95_low": 20.0,
+        "ci95_high": 20.0
+      },
+      "cumulative_reward": {
+        "mean": 14.84233946636629,
+        "ci95_low": 13.869018441786348,
+        "ci95_high": 15.815660490946232
+      },
+      "total_cost": {
+        "mean": 10.0,
+        "ci95_low": 10.0,
+        "ci95_high": 10.0
+      },
+      "unnecessary_recalibration_rate": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "time_to_failure": {
+        "median": 15.0,
+        "iqr_q1": 11.0,
+        "iqr_q3": 19.75
+      }
+    }
+  },
+  "budget_sweep": {
+    "periodic_full": [
+      {
+        "budget": 6.0,
+        "mean_performance": 0.7777958278218406,
+        "ci95_low": 0.7495850782270425,
+        "ci95_high": 0.8060065774166388
+      },
+      {
+        "budget": 9.0,
+        "mean_performance": 0.7777958278218406,
+        "ci95_low": 0.7495850782270425,
+        "ci95_high": 0.8060065774166388
+      },
+      {
+        "budget": 12.0,
+        "mean_performance": 0.8050440045630527,
+        "ci95_low": 0.7727918308583885,
+        "ci95_high": 0.8372961782677169
+      },
+      {
+        "budget": 15.0,
+        "mean_performance": 0.8050440045630527,
+        "ci95_low": 0.7727918308583885,
+        "ci95_high": 0.8372961782677169
+      },
+      {
+        "budget": 18.0,
+        "mean_performance": 0.8050440045630527,
+        "ci95_low": 0.7727918308583885,
+        "ci95_high": 0.8372961782677169
+      }
+    ],
+    "periodic_partial": [
+      {
+        "budget": 6.0,
+        "mean_performance": 0.8039349977018138,
+        "ci95_low": 0.7699055809455101,
+        "ci95_high": 0.8379644144581174
+      },
+      {
+        "budget": 9.0,
+        "mean_performance": 0.8136944938997649,
+        "ci95_low": 0.7821932566964255,
+        "ci95_high": 0.8451957311031043
+      },
+      {
+        "budget": 12.0,
+        "mean_performance": 0.867854387570766,
+        "ci95_low": 0.857712182420427,
+        "ci95_high": 0.8779965927211051
+      },
+      {
+        "budget": 15.0,
+        "mean_performance": 0.867854387570766,
+        "ci95_low": 0.857712182420427,
+        "ci95_high": 0.8779965927211051
+      },
+      {
+        "budget": 18.0,
+        "mean_performance": 0.8661073950715776,
+        "ci95_low": 0.8528767708244525,
+        "ci95_high": 0.8793380193187028
+      }
+    ],
+    "threshold": [
+      {
+        "budget": 6.0,
+        "mean_performance": 0.8064453791620769,
+        "ci95_low": 0.7647868212689002,
+        "ci95_high": 0.8481039370552537
+      },
+      {
+        "budget": 9.0,
+        "mean_performance": 0.799940152968561,
+        "ci95_low": 0.762124694512773,
+        "ci95_high": 0.8377556114243491
+      },
+      {
+        "budget": 12.0,
+        "mean_performance": 0.8217694604834413,
+        "ci95_low": 0.7902187930296225,
+        "ci95_high": 0.8533201279372602
+      },
+      {
+        "budget": 15.0,
+        "mean_performance": 0.8246919630860369,
+        "ci95_low": 0.7935685251998075,
+        "ci95_high": 0.8558154009722663
+      },
+      {
+        "budget": 18.0,
+        "mean_performance": 0.8108911394499033,
+        "ci95_low": 0.7781229324623264,
+        "ci95_high": 0.8436593464374802
+      }
+    ],
+    "conservative_bandit": [
+      {
+        "budget": 6.0,
+        "mean_performance": 0.7989139020387137,
+        "ci95_low": 0.7714684262255301,
+        "ci95_high": 0.8263593778518973
+      },
+      {
+        "budget": 9.0,
+        "mean_performance": 0.8014362814609604,
+        "ci95_low": 0.7708654314136636,
+        "ci95_high": 0.8320071315082571
+      },
+      {
+        "budget": 12.0,
+        "mean_performance": 0.8009087061395374,
+        "ci95_low": 0.7702913063425625,
+        "ci95_high": 0.8315261059365122
+      },
+      {
+        "budget": 15.0,
+        "mean_performance": 0.8009087061395374,
+        "ci95_low": 0.7702913063425625,
+        "ci95_high": 0.8315261059365122
+      },
+      {
+        "budget": 18.0,
+        "mean_performance": 0.8009087061395374,
+        "ci95_low": 0.7702913063425625,
+        "ci95_high": 0.8315261059365122
+      }
+    ]
+  }
+}

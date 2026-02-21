@@ -1,0 +1,305 @@
+{
+  "config": {
+    "csv": "data/hardware/hardware_timeseries.csv",
+    "outdir": "results/hw_grounded_smoke",
+    "steps": 40,
+    "mc": 30,
+    "budget": 25.0,
+    "seed": 12345,
+    "lookahead": 10,
+    "probe_shots": 1500,
+    "probe_cost": 0.5,
+    "partial_cost": 4.0,
+    "full_cost": 10.0,
+    "lambda_cost": 0.1,
+    "failure_threshold": 0.8,
+    "failure_consecutive": 3,
+    "threshold_partial": 0.03,
+    "threshold_full": 0.08
+  },
+  "budget_matching": {
+    "periodic_full_period": 39,
+    "periodic_partial_period": 7,
+    "conservative_policy_impl": "existing_conservative_bandit"
+  },
+  "results": {
+    "periodic_full": {
+      "total_full_recal_count": {
+        "mean": 2.0,
+        "ci95_low": 2.0,
+        "ci95_high": 2.0
+      },
+      "total_partial_recal_count": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "total_probe_count": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "cumulative_reward": {
+        "mean": 26.55671051854149,
+        "ci95_low": 25.931455717076027,
+        "ci95_high": 27.181965320006952
+      },
+      "total_cost": {
+        "mean": 20.0,
+        "ci95_low": 20.0,
+        "ci95_high": 20.0
+      },
+      "unnecessary_recalibration_rate": {
+        "mean": 0.26666666666666666,
+        "ci95_low": 0.1758783777194589,
+        "ci95_high": 0.3574549556138744
+      },
+      "time_to_failure": {
+        "median": 14.5,
+        "iqr_q1": 11.0,
+        "iqr_q3": 18.75
+      }
+    },
+    "periodic_partial": {
+      "total_full_recal_count": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "total_partial_recal_count": {
+        "mean": 6.0,
+        "ci95_low": 6.0,
+        "ci95_high": 6.0
+      },
+      "total_probe_count": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "cumulative_reward": {
+        "mean": 32.28362656572507,
+        "ci95_low": 32.00297065871175,
+        "ci95_high": 32.56428247273839
+      },
+      "total_cost": {
+        "mean": 24.0,
+        "ci95_low": 24.0,
+        "ci95_high": 24.0
+      },
+      "unnecessary_recalibration_rate": {
+        "mean": 0.35,
+        "ci95_low": 0.271141379720812,
+        "ci95_high": 0.428858620279188
+      },
+      "time_to_failure": {
+        "median": 41.0,
+        "iqr_q1": 10.0,
+        "iqr_q3": 41.0
+      }
+    },
+    "threshold": {
+      "total_full_recal_count": {
+        "mean": 1.4666666666666666,
+        "ci95_low": 1.1447657990344473,
+        "ci95_high": 1.7885675342988858
+      },
+      "total_partial_recal_count": {
+        "mean": 1.7333333333333334,
+        "ci95_low": 0.7892099567603503,
+        "ci95_high": 2.6774567099063162
+      },
+      "total_probe_count": {
+        "mean": 3.2,
+        "ci95_low": 2.843390680300484,
+        "ci95_high": 3.5566093196995165
+      },
+      "cumulative_reward": {
+        "mean": 26.674946231577373,
+        "ci95_low": 25.769613824024347,
+        "ci95_high": 27.5802786391304
+      },
+      "total_cost": {
+        "mean": 23.2,
+        "ci95_low": 22.665086020450726,
+        "ci95_high": 23.734913979549273
+      },
+      "unnecessary_recalibration_rate": {
+        "mean": 0.6888888888888889,
+        "ci95_low": 0.5719611095683134,
+        "ci95_high": 0.8058166682094644
+      },
+      "time_to_failure": {
+        "median": 18.0,
+        "iqr_q1": 12.25,
+        "iqr_q3": 21.5
+      }
+    },
+    "conservative_bandit": {
+      "total_full_recal_count": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "total_partial_recal_count": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "total_probe_count": {
+        "mean": 40.0,
+        "ci95_low": 40.0,
+        "ci95_high": 40.0
+      },
+      "cumulative_reward": {
+        "mean": 25.35392897016685,
+        "ci95_low": 24.247160501805244,
+        "ci95_high": 26.46069743852846
+      },
+      "total_cost": {
+        "mean": 20.0,
+        "ci95_low": 20.0,
+        "ci95_high": 20.0
+      },
+      "unnecessary_recalibration_rate": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "time_to_failure": {
+        "median": 13.0,
+        "iqr_q1": 8.25,
+        "iqr_q3": 19.75
+      }
+    }
+  },
+  "budget_sweep": {
+    "periodic_full": [
+      {
+        "budget": 12.5,
+        "mean_performance": 0.7085870283776631,
+        "ci95_low": 0.6943935576358566,
+        "ci95_high": 0.7227804991194695
+      },
+      {
+        "budget": 18.75,
+        "mean_performance": 0.7085870283776631,
+        "ci95_low": 0.6943935576358566,
+        "ci95_high": 0.7227804991194695
+      },
+      {
+        "budget": 25.0,
+        "mean_performance": 0.7162384011905836,
+        "ci95_low": 0.702572553701164,
+        "ci95_high": 0.7299042486800031
+      },
+      {
+        "budget": 31.25,
+        "mean_performance": 0.7994305702742578,
+        "ci95_low": 0.7930086350085214,
+        "ci95_high": 0.8058525055399942
+      },
+      {
+        "budget": 37.5,
+        "mean_performance": 0.7994305702742578,
+        "ci95_low": 0.7930086350085214,
+        "ci95_high": 0.8058525055399942
+      }
+    ],
+    "periodic_partial": [
+      {
+        "budget": 12.5,
+        "mean_performance": 0.8085518774725393,
+        "ci95_low": 0.801417454784427,
+        "ci95_high": 0.8156863001606516
+      },
+      {
+        "budget": 18.75,
+        "mean_performance": 0.8388559584031718,
+        "ci95_low": 0.8340390063223682,
+        "ci95_high": 0.8436729104839755
+      },
+      {
+        "budget": 25.0,
+        "mean_performance": 0.872170310322819,
+        "ci95_low": 0.8684867206282434,
+        "ci95_high": 0.8758539000173946
+      },
+      {
+        "budget": 31.25,
+        "mean_performance": 0.8768938727480293,
+        "ci95_low": 0.8731287119796662,
+        "ci95_high": 0.8806590335163924
+      },
+      {
+        "budget": 37.5,
+        "mean_performance": 0.8814014050692967,
+        "ci95_low": 0.8776261864751008,
+        "ci95_high": 0.8851766236634925
+      }
+    ],
+    "threshold": [
+      {
+        "budget": 12.5,
+        "mean_performance": 0.707501711351329,
+        "ci95_low": 0.6908114465352027,
+        "ci95_high": 0.7241919761674553
+      },
+      {
+        "budget": 18.75,
+        "mean_performance": 0.7085991573147787,
+        "ci95_low": 0.6926037870837115,
+        "ci95_high": 0.724594527545846
+      },
+      {
+        "budget": 25.0,
+        "mean_performance": 0.7112002968348721,
+        "ci95_low": 0.6975545128226436,
+        "ci95_high": 0.7248460808471006
+      },
+      {
+        "budget": 31.25,
+        "mean_performance": 0.7293472237913412,
+        "ci95_low": 0.7175239179829922,
+        "ci95_high": 0.7411705295996902
+      },
+      {
+        "budget": 37.5,
+        "mean_performance": 0.7334143447504244,
+        "ci95_low": 0.7210172802056,
+        "ci95_high": 0.7458114092952489
+      }
+    ],
+    "conservative_bandit": [
+      {
+        "budget": 12.5,
+        "mean_performance": 0.6834240413560425,
+        "ci95_low": 0.6689036908478191,
+        "ci95_high": 0.6979443918642659
+      },
+      {
+        "budget": 18.75,
+        "mean_performance": 0.6818426446005315,
+        "ci95_low": 0.6671117609654909,
+        "ci95_high": 0.6965735282355721
+      },
+      {
+        "budget": 25.0,
+        "mean_performance": 0.6818561414039904,
+        "ci95_low": 0.6671885478147032,
+        "ci95_high": 0.6965237349932777
+      },
+      {
+        "budget": 31.25,
+        "mean_performance": 0.6818561414039904,
+        "ci95_low": 0.6671885478147032,
+        "ci95_high": 0.6965237349932777
+      },
+      {
+        "budget": 37.5,
+        "mean_performance": 0.6818561414039904,
+        "ci95_low": 0.6671885478147032,
+        "ci95_high": 0.6965237349932777
+      }
+    ]
+  }
+}

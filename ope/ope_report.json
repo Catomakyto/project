@@ -1,0 +1,16 @@
+{
+  "candidate": {
+    "ips_mean": 0.41695019453246335,
+    "ips_lcb": 0.32338505859529654,
+    "dr_mean": 0.42815895762936174,
+    "dr_lcb": 0.3880511070926057
+  },
+  "baseline": {
+    "ips_mean": -4.7147710409811365,
+    "ips_lcb": -4.801490437124707,
+    "dr_mean": -4.684496656640773,
+    "dr_lcb": -4.731137700389327
+  },
+  "accept_candidate": true,
+  "rule": "accept iff DR_LCB(candidate) > DR_LCB(baseline)"
+}

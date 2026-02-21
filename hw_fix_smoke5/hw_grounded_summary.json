@@ -1,0 +1,185 @@
+{
+  "config": {
+    "csv": "data/hardware/hardware_timeseries.csv",
+    "outdir": "results/hw_fix_smoke5",
+    "steps": 80,
+    "mc": 30,
+    "budget": 60.0,
+    "seed": 12345,
+    "lookahead": 10,
+    "probe_shots": 1500,
+    "probe_cost": 2.0,
+    "partial_cost": 4.0,
+    "full_cost": 10.0,
+    "lambda_cost": 0.1,
+    "failure_threshold": 0.8,
+    "failure_consecutive": 3,
+    "max_probes": 40,
+    "beta": 0.3,
+    "danger_k": 5,
+    "threshold_partial": 0.03,
+    "threshold_full": 0.08
+  },
+  "budget_matching": {
+    "periodic_full_period": 15,
+    "periodic_partial_period": 6,
+    "conservative_policy_impl": "conservative_guarded_lcb",
+    "conservative_beta": 0.3,
+    "danger_k": 5,
+    "max_probes_per_horizon": 40
+  },
+  "results": {
+    "periodic_full": {
+      "total_cost_spent": {
+        "mean": 60.0,
+        "ci95_low": 60.0,
+        "ci95_high": 60.0
+      },
+      "probes": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "partial_recal": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "full_recal": {
+        "mean": 6.0,
+        "ci95_low": 6.0,
+        "ci95_high": 6.0
+      },
+      "cumulative_reward": {
+        "mean": 59.521254044803165,
+        "ci95_low": 59.05746915512091,
+        "ci95_high": 59.98503893448542
+      },
+      "unnecessary_recalibration_rate": {
+        "mean": 0.1611111111111111,
+        "ci95_low": 0.11287850810040276,
+        "ci95_high": 0.20934371412181943
+      },
+      "time_to_failure": {
+        "median": 14.5,
+        "iqr_q1": 11.0,
+        "iqr_q3": 27.25,
+        "iqr": 16.25
+      }
+    },
+    "periodic_partial": {
+      "total_cost_spent": {
+        "mean": 56.0,
+        "ci95_low": 56.0,
+        "ci95_high": 56.0
+      },
+      "probes": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "partial_recal": {
+        "mean": 14.0,
+        "ci95_low": 14.0,
+        "ci95_high": 14.0
+      },
+      "full_recal": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "cumulative_reward": {
+        "mean": 64.37112888622363,
+        "ci95_low": 63.999082191103156,
+        "ci95_high": 64.7431755813441
+      },
+      "unnecessary_recalibration_rate": {
+        "mean": 0.3476190476190476,
+        "ci95_low": 0.3027239378494295,
+        "ci95_high": 0.3925141573886657
+      },
+      "time_to_failure": {
+        "median": 42.0,
+        "iqr_q1": 7.5,
+        "iqr_q3": 81.0,
+        "iqr": 73.5
+      }
+    },
+    "threshold": {
+      "total_cost_spent": {
+        "mean": 60.0,
+        "ci95_low": 60.0,
+        "ci95_high": 60.0
+      },
+      "probes": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "partial_recal": {
+        "mean": 4.0,
+        "ci95_low": 1.5857434927583562,
+        "ci95_high": 6.414256507241644
+      },
+      "full_recal": {
+        "mean": 4.4,
+        "ci95_low": 3.434297397103343,
+        "ci95_high": 5.365702602896658
+      },
+      "cumulative_reward": {
+        "mean": 39.72766071426523,
+        "ci95_low": 36.61439938766896,
+        "ci95_high": 42.84092204086149
+      },
+      "unnecessary_recalibration_rate": {
+        "mean": 0.7088888888888889,
+        "ci95_low": 0.6323551194604831,
+        "ci95_high": 0.7854226583172947
+      },
+      "time_to_failure": {
+        "median": 21.0,
+        "iqr_q1": 15.25,
+        "iqr_q3": 28.5,
+        "iqr": 13.25
+      }
+    },
+    "conservative_bandit": {
+      "total_cost_spent": {
+        "mean": 59.2,
+        "ci95_low": 58.84339068030049,
+        "ci95_high": 59.55660931969952
+      },
+      "probes": {
+        "mean": 5.833333333333333,
+        "ci95_low": 4.659274910563568,
+        "ci95_high": 7.0073917561030985
+      },
+      "partial_recal": {
+        "mean": 10.966666666666667,
+        "ci95_low": 9.978887579570664,
+        "ci95_high": 11.95444575376267
+      },
+      "full_recal": {
+        "mean": 0.36666666666666664,
+        "ci95_low": -0.03735214856986935,
+        "ci95_high": 0.7706854819032026
+      },
+      "cumulative_reward": {
+        "mean": 57.90509030750424,
+        "ci95_low": 55.276596073926754,
+        "ci95_high": 60.53358454108172
+      },
+      "unnecessary_recalibration_rate": {
+        "mean": 0.4049148074148073,
+        "ci95_low": 0.33819936247324095,
+        "ci95_high": 0.4716302523563736
+      },
+      "time_to_failure": {
+        "median": 43.0,
+        "iqr_q1": 13.25,
+        "iqr_q3": 73.0,
+        "iqr": 59.75
+      }
+    }
+  }
+}

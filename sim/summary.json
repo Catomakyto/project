@@ -1,0 +1,17 @@
+{
+  "seed": 17,
+  "horizon": 250,
+  "episodes": 20,
+  "periodic": {
+    "mean_utility": -4.7185419813367275,
+    "mean_performance": 0.061528418663271946,
+    "silent_failure_rate": 0.9559999999999998,
+    "mean_cost": 0.00352
+  },
+  "conservative_bandit": {
+    "mean_utility": -0.014622103748931432,
+    "mean_performance": 0.02347441625106859,
+    "silent_failure_rate": 0.0076,
+    "mean_cost": 0.004826000000000001
+  }
+}
