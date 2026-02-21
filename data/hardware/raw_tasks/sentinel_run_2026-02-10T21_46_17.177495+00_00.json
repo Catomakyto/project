@@ -1,0 +1,144 @@
+{
+  "created_at": "2026-02-10T21:46:17.177495+00:00",
+  "device_arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+  "region": "us-west-1",
+  "s3_destination": "s3://amazon-braket-us-west-1-927138878088/calib-sched/ankaa3",
+  "requested_s3_destination": "s3://braket-results-isef-research/calib-sched/ankaa3",
+  "effective_s3_destination": "s3://amazon-braket-us-west-1-927138878088/calib-sched/ankaa3",
+  "s3_destination_override_reason": "Configured bucket 'braket-results-isef-research' is not Braket-compatible in this account/device context; using default bucket 'amazon-braket-us-west-1-927138878088' instead.",
+  "dry_run": false,
+  "confirm_spend": true,
+  "yes_i_understand": true,
+  "prefer_single_task_batch": true,
+  "estimated_cost": {
+    "estimated_tasks": 1,
+    "estimated_shots": 7500,
+    "per_task_usd": 0.3,
+    "per_shot_usd": 0.00035,
+    "estimated_total_usd": 2.925
+  },
+  "shots": [
+    1500,
+    1500,
+    1500,
+    1500,
+    1500
+  ],
+  "shot_counts": [
+    1500,
+    1500,
+    1500,
+    1500,
+    1500
+  ],
+  "circuit_descriptors": [
+    {
+      "circuit_index": 0,
+      "name": "RO0",
+      "circuit_type": "readout_zero",
+      "shots": 1500,
+      "qubits": [
+        0,
+        1
+      ],
+      "pair": [],
+      "repeats": 0,
+      "measured_qubits": [
+        0,
+        1
+      ],
+      "bit_order": "measured_qubits_left_to_right",
+      "task_arn": "arn:aws:braket:us-west-1:927138878088:quantum-task/11b5b7fe-c7c6-4ba8-997c-cab7d872b727",
+      "result_index": 0
+    },
+    {
+      "circuit_index": 1,
+      "name": "RO1",
+      "circuit_type": "readout_one",
+      "shots": 1500,
+      "qubits": [
+        0,
+        1
+      ],
+      "pair": [],
+      "repeats": 0,
+      "measured_qubits": [
+        0,
+        1
+      ],
+      "bit_order": "measured_qubits_left_to_right",
+      "task_arn": "arn:aws:braket:us-west-1:927138878088:quantum-task/653663e6-d09d-4abf-9793-e67ccd25018d",
+      "result_index": 0
+    },
+    {
+      "circuit_index": 2,
+      "name": "RX4_q0",
+      "circuit_type": "coherent_rx",
+      "shots": 1500,
+      "qubits": [
+        0
+      ],
+      "pair": [],
+      "repeats": 4,
+      "measured_qubits": [
+        0
+      ],
+      "bit_order": "measured_qubits_left_to_right",
+      "task_arn": "arn:aws:braket:us-west-1:927138878088:quantum-task/cebed9b3-76c0-4e96-a614-4d81c2ead0a3",
+      "result_index": 0
+    },
+    {
+      "circuit_index": 3,
+      "name": "RX8_q0",
+      "circuit_type": "coherent_rx",
+      "shots": 1500,
+      "qubits": [
+        0
+      ],
+      "pair": [],
+      "repeats": 8,
+      "measured_qubits": [
+        0
+      ],
+      "bit_order": "measured_qubits_left_to_right",
+      "task_arn": "arn:aws:braket:us-west-1:927138878088:quantum-task/bd6fe8cd-5702-4b01-9e31-9951cc76286e",
+      "result_index": 0
+    },
+    {
+      "circuit_index": 4,
+      "name": "XT_01",
+      "circuit_type": "crosstalk_pair",
+      "shots": 1500,
+      "qubits": [],
+      "pair": [
+        0,
+        1
+      ],
+      "repeats": 0,
+      "measured_qubits": [
+        0,
+        1
+      ],
+      "bit_order": "measured_qubits_left_to_right",
+      "task_arn": "arn:aws:braket:us-west-1:927138878088:quantum-task/15f5e745-d4b1-499d-a860-0f1d044e3ff6",
+      "result_index": 0
+    }
+  ],
+  "batched": true,
+  "task_arns": [
+    "arn:aws:braket:us-west-1:927138878088:quantum-task/11b5b7fe-c7c6-4ba8-997c-cab7d872b727",
+    "arn:aws:braket:us-west-1:927138878088:quantum-task/653663e6-d09d-4abf-9793-e67ccd25018d",
+    "arn:aws:braket:us-west-1:927138878088:quantum-task/cebed9b3-76c0-4e96-a614-4d81c2ead0a3",
+    "arn:aws:braket:us-west-1:927138878088:quantum-task/bd6fe8cd-5702-4b01-9e31-9951cc76286e",
+    "arn:aws:braket:us-west-1:927138878088:quantum-task/15f5e745-d4b1-499d-a860-0f1d044e3ff6"
+  ],
+  "task_ids": [
+    "arn:aws:braket:us-west-1:927138878088:quantum-task/11b5b7fe-c7c6-4ba8-997c-cab7d872b727",
+    "arn:aws:braket:us-west-1:927138878088:quantum-task/653663e6-d09d-4abf-9793-e67ccd25018d",
+    "arn:aws:braket:us-west-1:927138878088:quantum-task/cebed9b3-76c0-4e96-a614-4d81c2ead0a3",
+    "arn:aws:braket:us-west-1:927138878088:quantum-task/bd6fe8cd-5702-4b01-9e31-9951cc76286e",
+    "arn:aws:braket:us-west-1:927138878088:quantum-task/15f5e745-d4b1-499d-a860-0f1d044e3ff6"
+  ],
+  "batch_error": null,
+  "actual_tasks_submitted": 5
+}

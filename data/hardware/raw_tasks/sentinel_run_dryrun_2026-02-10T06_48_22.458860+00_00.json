@@ -1,0 +1,118 @@
+{
+  "created_at": "2026-02-10T06:48:22.458860+00:00",
+  "device_arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+  "region": "us-west-1",
+  "s3_destination": "s3://braket-results-isef-research/calib-sched/ankaa3",
+  "dry_run": true,
+  "confirm_spend": true,
+  "yes_i_understand": true,
+  "prefer_single_task_batch": true,
+  "estimated_cost": {
+    "estimated_tasks": 1,
+    "estimated_shots": 7500,
+    "per_task_usd": 0.3,
+    "per_shot_usd": 0.00035,
+    "estimated_total_usd": 2.925
+  },
+  "shots": [
+    1500,
+    1500,
+    1500,
+    1500,
+    1500
+  ],
+  "shot_counts": [
+    1500,
+    1500,
+    1500,
+    1500,
+    1500
+  ],
+  "circuit_descriptors": [
+    {
+      "circuit_index": 0,
+      "name": "RO0",
+      "circuit_type": "readout_zero",
+      "shots": 1500,
+      "qubits": [
+        0,
+        1
+      ],
+      "pair": [],
+      "repeats": 0,
+      "measured_qubits": [
+        0,
+        1
+      ],
+      "bit_order": "measured_qubits_left_to_right"
+    },
+    {
+      "circuit_index": 1,
+      "name": "RO1",
+      "circuit_type": "readout_one",
+      "shots": 1500,
+      "qubits": [
+        0,
+        1
+      ],
+      "pair": [],
+      "repeats": 0,
+      "measured_qubits": [
+        0,
+        1
+      ],
+      "bit_order": "measured_qubits_left_to_right"
+    },
+    {
+      "circuit_index": 2,
+      "name": "RX4_q0",
+      "circuit_type": "coherent_rx",
+      "shots": 1500,
+      "qubits": [
+        0
+      ],
+      "pair": [],
+      "repeats": 4,
+      "measured_qubits": [
+        0
+      ],
+      "bit_order": "measured_qubits_left_to_right"
+    },
+    {
+      "circuit_index": 3,
+      "name": "RX8_q0",
+      "circuit_type": "coherent_rx",
+      "shots": 1500,
+      "qubits": [
+        0
+      ],
+      "pair": [],
+      "repeats": 8,
+      "measured_qubits": [
+        0
+      ],
+      "bit_order": "measured_qubits_left_to_right"
+    },
+    {
+      "circuit_index": 4,
+      "name": "XT_01",
+      "circuit_type": "crosstalk_pair",
+      "shots": 1500,
+      "qubits": [],
+      "pair": [
+        0,
+        1
+      ],
+      "repeats": 0,
+      "measured_qubits": [
+        0,
+        1
+      ],
+      "bit_order": "measured_qubits_left_to_right"
+    }
+  ],
+  "batched": false,
+  "task_arns": [],
+  "task_ids": [],
+  "batch_error": null
+}

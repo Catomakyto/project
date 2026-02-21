@@ -1,0 +1,57 @@
+{
+  "source_csv": "data/hardware/hardware_timeseries.csv",
+  "num_rows_used": 4,
+  "created_at_min": "2026-02-10 07:25:08.682178+00:00",
+  "created_at_max": "2026-02-11 06:27:55.423044+00:00",
+  "median_step_seconds": 24862.118145,
+  "channels": {
+    "z": {
+      "mu": 0.002,
+      "sigma": 0.00395360000000005,
+      "p_burst": 0.3333333333333333,
+      "sigma_burst": 0.01186080000000015,
+      "initial_mean": 0.010199999999999999,
+      "initial_sigma": 0.0103782,
+      "min_value": 0.0,
+      "max_value": 1.0,
+      "n_points": 4,
+      "n_deltas": 3
+    },
+    "o": {
+      "mu": 0.008,
+      "sigma": 0.0118608,
+      "p_burst": 0.1,
+      "sigma_burst": 0.0355824,
+      "initial_mean": 0.05759999999999996,
+      "initial_sigma": 0.0059304,
+      "min_value": 0.0,
+      "max_value": 1.0,
+      "n_points": 4,
+      "n_deltas": 3
+    },
+    "c": {
+      "mu": -0.002666666666666699,
+      "sigma": 0.008401399999999903,
+      "p_burst": 0.3333333333333333,
+      "sigma_burst": 0.025204199999999708,
+      "initial_mean": 0.006999999999999981,
+      "initial_sigma": 0.015320200000000025,
+      "min_value": 0.0,
+      "max_value": 1.0,
+      "n_points": 4,
+      "n_deltas": 3
+    },
+    "x": {
+      "mu": -0.010000000000000078,
+      "sigma": 0.0009883999999997883,
+      "p_burst": 0.3333333333333333,
+      "sigma_burst": 0.002965199999999365,
+      "initial_mean": 0.08439999999999996,
+      "initial_sigma": 0.0074130000000000576,
+      "min_value": 0.0,
+      "max_value": 1.0,
+      "n_points": 4,
+      "n_deltas": 3
+    }
+  }
+}

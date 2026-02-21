@@ -1,0 +1,98 @@
+simulation:
+  seed: 17
+  horizon: 250
+  episodes: 20
+  num_qubits: 4
+
+  drift:
+    readout_sigma: 0.0004
+    coherent_kappa: 0.03
+    coherent_sigma: 0.0002
+    crosstalk_rho: 0.96
+    crosstalk_sigma: 0.0002
+    p_burst_up: 0.01
+    p_burst_down: 0.18
+    burst_amplitude: 0.004
+    residual_error: 0.0001
+
+  workload:
+    qubit_pool: [0, 1, 2, 3]
+    min_qubits: 2
+    max_qubits: 3
+    depth_range: [8, 30]
+    two_qubit_range: [1, 8]
+
+  sensitivity:
+    readout: 45.0
+    coherent: 120.0
+    crosstalk: 220.0
+
+  action_costs:
+    idle: 0.0
+    probe: 0.004
+    partial: 0.03
+    full: 0.08
+
+  utility:
+    lambda_weight: 0.02
+    mu_penalty: 5.0
+    silent_failure_tau: 0.92
+
+  baseline:
+    period: 24
+    threshold: 0.08
+
+  conservative_bandit:
+    ridge: 1.0
+    beta: 1.8
+    uncertainty_threshold: 1.05
+    risk_threshold: 0.12
+    improvement_margin: 0.002
+    exploration_epsilon: 0.03
+
+  logging:
+    episodes: 30
+    behavior_epsilon: 0.20
+
+hardware:
+  # SAFE DEFAULT: simulator alias, not QPU.
+  default_device: rigetti_ankaa3
+  aliases:
+    sv1: arn:aws:braket:::device/quantum-simulator/amazon/sv1
+    rigetti_ankaa3: arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3
+
+  default_region: us-west-1
+  s3_destination: s3://braket-results-isef-research/calib-sched/ankaa3
+  metadata_dir: data/hardware/raw_tasks
+  timeseries_csv: data/hardware/hardware_timeseries.csv
+
+  # Default monitored qubits/pair for low-cost drift logging.
+  monitor_qubits: [0, 1]
+  monitor_pair: [0, 1]
+
+  # Sentinel suite at each timepoint (5 circuits):
+  # 1) RO0, 2) RO1, 3) RX4_q0, 4) RX8_q0, 5) XT_01
+  sentinel_suite:
+    shots_per_circuit: 1500
+    coherent_repeats: [4, 8]
+
+  batching:
+    prefer_single_task: true
+
+  # Pricing table lives in config only. Update to your current contract rates.
+  pricing:
+    default:
+      per_task_usd: 0.0
+      per_shot_usd: 0.0
+    devices:
+      sv1:
+        per_task_usd: 0.0
+        per_shot_usd: 0.0
+      rigetti_ankaa3:
+        per_task_usd: 0.3000
+        per_shot_usd: 0.000350
+
+ope:
+  reward_model_ridge: 1.0
+  delta: 0.05
+  clip_weight: 20.0
