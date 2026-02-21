@@ -1,0 +1,198 @@
+{
+  "config": {
+    "csv": "data/hardware/hardware_timeseries.csv",
+    "outdir": "results",
+    "steps": 200,
+    "mc": 80,
+    "budget": 100.0,
+    "seed": 12345,
+    "lookahead": 10,
+    "probe_shots": 1500,
+    "probe_cost": 2.0,
+    "partial_cost": 4.0,
+    "full_cost": 10.0,
+    "lambda_cost": 0.1,
+    "failure_threshold": 0.8,
+    "failure_consecutive": 3,
+    "max_probes": 40,
+    "beta": 0.3,
+    "danger_k": 5,
+    "threshold_partial": 0.03,
+    "threshold_full": 0.08,
+    "regime_switch": true,
+    "switch_step": 100,
+    "shock_preset": "coherent_burst",
+    "shock_duration_min": 10,
+    "shock_duration_max": 20
+  },
+  "budget_matching": {
+    "periodic_full_period": 22,
+    "periodic_partial_period": 8,
+    "conservative_policy_impl": "conservative_guarded_lcb",
+    "conservative_beta": 0.3,
+    "danger_k": 5,
+    "max_probes_per_horizon": 40
+  },
+  "results": {
+    "periodic_full": {
+      "total_cost_spent": {
+        "mean": 100.0,
+        "ci95_low": 100.0,
+        "ci95_high": 100.0
+      },
+      "probes": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "partial_recal": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "full_recal": {
+        "mean": 10.0,
+        "ci95_low": 10.0,
+        "ci95_high": 10.0
+      },
+      "cumulative_reward": {
+        "mean": 146.4144918449229,
+        "ci95_low": 145.61593231118002,
+        "ci95_high": 147.2130513786658
+      },
+      "unnecessary_recalibration_rate": {
+        "mean": 0.07749999999999999,
+        "ci95_low": 0.06231190089476698,
+        "ci95_high": 0.092688099105233
+      },
+      "time_to_failure": {
+        "median": 16.0,
+        "iqr_q1": 9.0,
+        "iqr_q3": 20.0,
+        "iqr": 11.0
+      },
+      "post_switch_time_to_failure_median": 0.0,
+      "collapse_rate": 0.0
+    },
+    "periodic_partial": {
+      "total_cost_spent": {
+        "mean": 100.0,
+        "ci95_low": 100.0,
+        "ci95_high": 100.0
+      },
+      "probes": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "partial_recal": {
+        "mean": 25.0,
+        "ci95_low": 25.0,
+        "ci95_high": 25.0
+      },
+      "full_recal": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "cumulative_reward": {
+        "mean": 162.44004039540965,
+        "ci95_low": 161.8369019219464,
+        "ci95_high": 163.0431788688729
+      },
+      "unnecessary_recalibration_rate": {
+        "mean": 0.2415,
+        "ci95_low": 0.21696628143074426,
+        "ci95_high": 0.26603371856925573
+      },
+      "time_to_failure": {
+        "median": 42.0,
+        "iqr_q1": 11.75,
+        "iqr_q3": 97.75,
+        "iqr": 86.0
+      },
+      "post_switch_time_to_failure_median": 0.0,
+      "collapse_rate": 0.15
+    },
+    "threshold": {
+      "total_cost_spent": {
+        "mean": 100.0,
+        "ci95_low": 100.0,
+        "ci95_high": 100.0
+      },
+      "probes": {
+        "mean": 0.0,
+        "ci95_low": 0.0,
+        "ci95_high": 0.0
+      },
+      "partial_recal": {
+        "mean": 3.75,
+        "ci95_low": 1.7814899935307364,
+        "ci95_high": 5.7185100064692636
+      },
+      "full_recal": {
+        "mean": 8.5,
+        "ci95_low": 7.712595997412294,
+        "ci95_high": 9.287404002587705
+      },
+      "cumulative_reward": {
+        "mean": 39.978889685488454,
+        "ci95_low": 37.912335484344204,
+        "ci95_high": 42.045443886632704
+      },
+      "unnecessary_recalibration_rate": {
+        "mean": 0.696,
+        "ci95_low": 0.6455579191145862,
+        "ci95_high": 0.7464420808854138
+      },
+      "time_to_failure": {
+        "median": 23.0,
+        "iqr_q1": 18.0,
+        "iqr_q3": 30.0,
+        "iqr": 12.0
+      },
+      "post_switch_time_to_failure_median": 0.0,
+      "collapse_rate": 0.0
+    },
+    "conservative_bandit": {
+      "total_cost_spent": {
+        "mean": 98.55,
+        "ci95_low": 98.35307181801286,
+        "ci95_high": 98.74692818198713
+      },
+      "probes": {
+        "mean": 3.7625,
+        "ci95_low": 3.404806797359539,
+        "ci95_high": 4.120193202640461
+      },
+      "partial_recal": {
+        "mean": 22.725,
+        "ci95_low": 22.51879870348724,
+        "ci95_high": 22.931201296512764
+      },
+      "full_recal": {
+        "mean": 0.0125,
+        "ci95_low": -0.011999999999999997,
+        "ci95_high": 0.037
+      },
+      "cumulative_reward": {
+        "mean": 160.28025585256094,
+        "ci95_low": 159.3372816096155,
+        "ci95_high": 161.22323009550638
+      },
+      "unnecessary_recalibration_rate": {
+        "mean": 0.24381560166886249,
+        "ci95_low": 0.2201256973929652,
+        "ci95_high": 0.26750550594475975
+      },
+      "time_to_failure": {
+        "median": 42.0,
+        "iqr_q1": 11.75,
+        "iqr_q3": 88.0,
+        "iqr": 76.25
+      },
+      "post_switch_time_to_failure_median": 0.0,
+      "collapse_rate": 0.125
+    }
+  }
+}
