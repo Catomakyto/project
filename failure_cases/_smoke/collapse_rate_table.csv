@@ -1,0 +1,4 @@
+policy,collapse_rate,median_time_to_failure,cumulative_reward_mean
+periodic_full,1.0,15.0,33.364349416537415
+periodic_partial,1.0,17.0,33.70197485262672
+conservative_best,1.0,15.0,33.22457390512233

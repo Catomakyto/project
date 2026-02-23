@@ -1,0 +1,11 @@
+scenario,policy,beta,budget,median_time_to_failure,collapse_rate,cumulative_reward_mean
+periodic_collapse_under_shock,periodic_full,,100.0,107.0,0.75,180.0645398682403
+periodic_collapse_under_shock,periodic_partial,,100.0,251.0,0.0125,203.5176046494492
+periodic_collapse_under_shock,conservative_best,0.2,100.0,35.5,1.0,89.52500969540299
+low_beta_instability,conservative_bandit,0.01,100.0,35.5,1.0,88.7704914096497
+low_beta_instability_reference,conservative_best,0.2,100.0,35.5,1.0,89.52500969540299
+over_conservative_stagnation,conservative_bandit,1.0,100.0,35.5,1.0,89.51890201033336
+over_conservative_stagnation_reference,conservative_best,0.2,100.0,35.5,1.0,89.52500969540299
+low_budget_breakdown,periodic_full,,5.0,35.5,1.0,39.86696444135932
+low_budget_breakdown,periodic_partial,,5.0,39.0,1.0,40.7374030714934
+low_budget_breakdown,conservative_best,0.2,5.0,35.5,1.0,39.51483389837455

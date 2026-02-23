@@ -1,0 +1,8 @@
+[done] conservative_best_beta=0.20
+[done] saved:
+  - results/failure_cases/_tune_0.55/failure_periodic_shock.png
+  - results/failure_cases/_tune_0.55/failure_low_beta.png
+  - results/failure_cases/_tune_0.55/failure_high_beta.png
+  - results/failure_cases/_tune_0.55/failure_low_budget.png
+  - results/failure_cases/_tune_0.55/collapse_rate_table.csv
+  - results/failure_cases/_tune_0.55/failure_summary.csv
