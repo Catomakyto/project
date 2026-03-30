@@ -1,18 +1,5 @@
 # Drift-Aware Calibration Scheduling
 
-This repository provides:
-- simulation evaluation,
-- a conservative uncertainty-aware contextual bandit policy,
-- off-policy evaluation (IPS + DR + empirical-Bernstein LCB),
-- a safe hardware logging pipeline for AWS Braket sentinel runs.
-
-## Safety / Spend Control
-All potentially billable Braket actions are gated.
-- `run_hardware` defaults to **dry-run**.
-- Actual submission requires **both** `--confirm-spend` and `--yes-i-understand`.
-- Submission also requires an **explicit** `--device` alias/ARN.
-- Cost estimate (tasks, shots, USD) is printed before submission.
-
 ## Commands
 
 1. Simulation evaluation (no AWS spend)
